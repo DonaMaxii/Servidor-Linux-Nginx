@@ -118,3 +118,19 @@ O arquivo deverá exibir uma saída semelhante a esta:
     2025-08-06 17:24:00 - NGINX está ativo.
     2025-08-06 17:25:00 - NGINX está ativo.
     2025-08-06 17:26:00 - NGINX está ativo.
+
+## Notificação Webhook para Slack
+
+Neste etapa, configuramos um bot para avisar em um servidor Slack quando o serviço web está fora do ar.
+
+Para isso, é necessário ter uma conta e um workspace Slack ativos.
+
+__Passo 1:__ acesse o link *https://api.slack.com/apps* a partir do Workspace desejado.
+
+__Passo 2:__ configure um bot para servir as notificações;
+
+__Passo 3:__ requira ao Slack um link webhook, que será acrescentado ao script já configurado nos passos acima. O link deverá aparecer desta maneira:
+
+    https://hooks.slack.com/services/T00000000/B00000000/XXXXXXXXXXXXXXXXXXXXXXXX
+
+__Passo 4:__ insira o referido link no script, declarando a variável WEBHOOK.
