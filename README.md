@@ -147,3 +147,7 @@ __Passo 5:__ Por fim, desligue o serviço Nginx através do comando *service ngi
     ATENÇÃO - SISTEMA NGINX FORA DO AR em 2025-08-06 18:08:00
     18h09
     ATENÇÃO - SISTEMA NGINX FORA DO AR em 2025-08-06 18:09:00
+
+***
+
+Se você chegou até aqui, muito obrigada pela atenção. :D
