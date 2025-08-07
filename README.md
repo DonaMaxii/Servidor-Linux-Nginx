@@ -82,23 +82,14 @@ Ao programar esse script, atente-se em definir variáveis como o caminho para o 
 
     # Data e hora atuais
     DATA=$(date '+%Y-%m-%d %H:%M:%S')
-    WEBHOOK_URL="https://hooks.slack.com/services/T098U6WTK9T/B0999MTS81G/
-        731nsyzpvAoIH7ErZFImBlce"
 
-    # Verificação de status , com desvio condicional
-    
-    # se o NGINX está ativo:
+    # Verificação de status , com desvio condicional   
+
     if systemctl is-active --quiet nginx; then
-	echo "$DATA - NGINX está ativo." >> "$LOGFILE"
-    
-    #Se o NGINX NÃO estiver ativo, ou desativado:
+		echo "$DATA - NGINX está ativo." >> "$LOGFILE"
     else
-	echo "$DATA - ATENÇÃO: o serviço NGINX está parado!!" >> "$LOGFILE"
-
-	#Enviando alerta para o SLACK
-	curl -X POST -H 'Content-type: application/json' \
-		--data '{"text":"ATENÇÃO - SISTEMA NGINX FORA DO AR em '"$DATA"'"}' \
-		"$WEBHOOK_URL"
+		echo "$DATA - ATENÇÃO: o serviço NGINX está parado!!" >> "$LOGFILE"
+ 
     fi
 
 __Passo 4:__ Agora, é necessário configurar o sistema para executar esse script em tempo real e automaticamente. Para isso, utilizamos o serviço *cron*.
