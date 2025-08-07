@@ -5,7 +5,7 @@ LOGFILE="/var/log/nginx_status.log"
 
 # Data e hora atuais
 DATA=$(date '+%Y-%m-%d %H:%M:%S')
-WEBHOOK_URL="https://hooks.slack.com/services/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"
+WEBHOOK_URL="https://hooks.slack.com/services/T00000000/B00000000/XXXXXXXXXXXXXXXXXXXXXXXX"
 
 # Verificação de status , com desvio condicional
 # se o NGINX está ativo:
