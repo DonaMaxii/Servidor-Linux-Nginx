@@ -4,6 +4,8 @@ Olá! Este é um projeto de servidor Linux com hospedagem HTML, com script para 
 
 Este projeto é supervisionado e coordenado pela equipe de Estágio de DevSecOps da Ai/R Learning.
 
+	![Servidor Web Nginx](thumbnail.jpeg)
+
 ## Passo a Passo:
 
 ## Instalação do Servidor Local
