@@ -127,10 +127,30 @@ Para isso, é necessário ter uma conta e um workspace Slack ativos.
 
 __Passo 1:__ acesse o link *https://api.slack.com/apps* a partir do Workspace desejado.
 
-__Passo 2:__ configure um bot para servir as notificações;
+__Passo 2:__ configure um bot para servir as notificações, definindo em qual servidor ele irá atuar;
 
-__Passo 3:__ requira ao Slack um link webhook, que será acrescentado ao script já configurado nos passos acima. O link deverá aparecer desta maneira:
+__Passo 3:__ requeira ao Slack um link tipo webhook, que será acrescentado ao script já configurado nos passos acima. O link deverá aparecer neste formato:
 
     https://hooks.slack.com/services/T00000000/B00000000/XXXXXXXXXXXXXXXXXXXXXXXX
 
-__Passo 4:__ insira o referido link no script, declarando a variável WEBHOOK.
+__Passo 4:__ insira o referido link no script *script_verify.sh*, declarando a variável WEBHOOK. Em seguida, insira a instrução curl para enviar o alerta ao Slack, definindo mensagem a ser exibida.
+
+    WEBHOOK_URL="https://hooks.slack.com/services/T00000000/B00000000/XXXXXXXXXXXXXXXXXXXXXXXX"
+
+	# Enviando alerta para o SLACK
+	curl -X POST -H 'Content-type: application/json' \
+	--data '{"text":"ATENÇÃO - SISTEMA NGINX FORA DO AR em '"$DATA"'"}' \
+	"$WEBHOOK_URL"
+
+__Passo 5:__ Por fim, desligue o serviço Nginx através do comando *service nginx stop*. Caso as configurações surtam efeito, você verá as notificações sendo escritas no chat do servidor escolhido.
+
+    18h05
+    ATENÇÃO - SISTEMA NGINX FORA DO AR em 2025-08-06 18:05:00
+    18h06
+    ATENÇÃO - SISTEMA NGINX FORA DO AR em 2025-08-06 18:06:00
+    18h07
+    ATENÇÃO - SISTEMA NGINX FORA DO AR em 2025-08-06 18:07:01
+    18h08
+    ATENÇÃO - SISTEMA NGINX FORA DO AR em 2025-08-06 18:08:00
+    18h09
+    ATENÇÃO - SISTEMA NGINX FORA DO AR em 2025-08-06 18:09:00
