@@ -23,7 +23,7 @@ No software hipervisor de sua preferência, crie uma VM e instale a referida dis
 
 --- 
 
-## ✅ Instalação do serviço Ngnix
+## Instalação do serviço Ngnix
 
 Após a instalação da distro e realizadas as configurações iniciais, precede-se com a instalação e configuração do servidor HTTP Ngnix.
 
@@ -61,7 +61,7 @@ __Passo 3:__ Testando o servidor: para verificar se o servidor está no ar, bast
 
 ---
 
-## 📝 Logs de servidor
+## Logs de servidor
 
 Agora, configuramos o arquivo .sh para monitorar o status do servidor web, atualizando arquivo .log a cada 1 (um) minuto.
 
@@ -118,7 +118,7 @@ O arquivo deverá exibir uma saída semelhante a esta:
 
 ---
 
-## 🗯️‼️ Notificação Webhook para Slack
+## Notificação Webhook para Slack
 
 Neste etapa, configuramos um bot para avisar em um servidor Slack quando o serviço web está fora do ar.
 
