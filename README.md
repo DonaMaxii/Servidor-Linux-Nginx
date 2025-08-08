@@ -7,10 +7,10 @@ Este projeto é supervisionado e coordenado pela equipe de Estágio de DevSecOps
 ![Servidor Web Nginx](/thumbnail.png)
 
 ## Índice
-* [Instalação do Servidor Local](#Instalação-do-Servidor-Local)
-* [Instalação do serviço Ngnix](#Instalação-do-serviço-Ngnix)
-* [Logs de servidor](#Logs-de-servidor)
-* [Notificação Webhook para Slack](#Notificacao-Webhook-para-Slack)
+* [Instalação do Servidor Local](#instalação-do-servidor-local)
+* [Instalação do serviço Ngnix](#instalação-do-serviço-ngnix)
+* [Logs de servidor](#logs-de-servidor)
+* [Notificação Webhook para Slack](#notificacao-webhook-para-slack)
 
 
 ## ➡️ Passo a Passo:
@@ -21,7 +21,8 @@ Neste projeto, utilizaremos uma VM com Ubuntu 24.04.2 instalado, em modo CLI, se
 
 No software hipervisor de sua preferência, crie uma VM e instale a referida distro.
 
----
+--- 
+
 ## ✅ Instalação do serviço Ngnix
 
 Após a instalação da distro e realizadas as configurações iniciais, precede-se com a instalação e configuração do servidor HTTP Ngnix.
