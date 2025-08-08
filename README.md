@@ -8,11 +8,8 @@ Este projeto é supervisionado e coordenado pela equipe de Estágio de DevSecOps
 
 ## Índice
 * [Instalação do Servidor Local](#Instalação-do-Servidor-Local)
-
 * [Instalação do serviço Ngnix](#Instalação-do-serviço-Ngnix)
-
 * [Logs de servidor](#Logs-de-servidor)
-  
 * [Notificação Webhook para Slack](#Notificacao-Webhook-para-Slack)
 
 
