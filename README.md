@@ -1,4 +1,4 @@
-# Projeto Servidor Linux com Nginx
+# 🖥️ Projeto Servidor Linux com Nginx
 
 Olá! Este é um projeto de servidor Linux com hospedagem HTML, com script para criação de logs, verificação de erros e notificação para a plataforma de chat Slack.
 
@@ -6,26 +6,30 @@ Este projeto é supervisionado e coordenado pela equipe de Estágio de DevSecOps
 
 ![Servidor Web Nginx](/thumbnail.png)
 
-## Passo a Passo:
+## Índice
+* [Instalação do Servidor Local](#Instalação-do-Servidor-Local)
+
+* [Instalação do serviço Ngnix](##-Instalação-do-serviço-Ngnix)
+
+* [Logs de servidor](##-📝-Logs-de-servidor)
+  
+* [Notificação Webhook para Slack](#-notificacao-webhook-para-slack)
+
+
+## ➡️ Passo a Passo:
 
 ## Instalação do Servidor Local
 
 Neste projeto, utilizaremos uma VM com Ubuntu 24.04.2 instalado, em modo CLI, sem ambiente gráfico.
+
 No software hipervisor de sua preferência, crie uma VM e instale a referida distro.
 
-Em seguida, configure o acesso ao root, definindo a senha para o mesmo:
-
-    > sudo passwd root
-
-
-## Instalação do serviço Ngnix
+---
+## ✅ Instalação do serviço Ngnix
 
 Após a instalação da distro e realizadas as configurações iniciais, precede-se com a instalação e configuração do servidor HTTP Ngnix.
 
-
-### Passo 1: instalando o Nginx
-
-Logado no servidor como administrador (root), efetue o download do servidor Nginx:
+__Passo 1:__ instalando o Nginx: logado no servidor como administrador (root), efetue o download do servidor Nginx:
 
     > apt update
     > apt install nginx
@@ -42,22 +46,24 @@ Ps: Outra maneira de checar o *status* do serviço Nginx é através do comando:
 
 Caso digitar no navegador de outra VM, o IP da VM, e o servidor Nginx estiver devidamente ativado, a página inicial padrão do Nginx será exibida na tela.
 
-### Passo 2: Configurando a página inicial
+---
 
-Para editar a página padrão do Nginx, a ser exibida ao digitar o IP do servidor, basta editar o arquivo *index.nginx-debian.html*:
+__Passo 2:__ para editar a página inicial padrão do Nginx, a ser exibida ao digitar o IP do servidor, basta editar o arquivo *index.nginx-debian.html*:
 
     > nano index.nginx-debian.html
 
 Assim, você pode editar o conteúdo da página em HTML.
 
-### Passo 3: Testando o servidor
+---
 
-Para verificar se o servidor está no ar, basta dar um ping no endereço de IP.
+__Passo 3:__ Testando o servidor: para verificar se o servidor está no ar, basta dar um ping no endereço de IP.
 
     > ip a //para verificar o IP local do servidor
     > ping //IP do servidor
 
-## Logs de servidor
+---
+
+## 📝 Logs de servidor
 
 Agora, configuramos o arquivo .sh para monitorar o status do servidor web, atualizando arquivo .log a cada 1 (um) minuto.
 
@@ -112,7 +118,9 @@ O arquivo deverá exibir uma saída semelhante a esta:
     2025-08-06 17:25:00 - NGINX está ativo.
     2025-08-06 17:26:00 - NGINX está ativo.
 
-## Notificação Webhook para Slack
+---
+
+## 🗯️‼️ Notificação Webhook para Slack
 
 Neste etapa, configuramos um bot para avisar em um servidor Slack quando o serviço web está fora do ar.
 
@@ -148,6 +156,10 @@ __Passo 5:__ Por fim, desligue o serviço Nginx através do comando *service ngi
     18h09
     ATENÇÃO - SISTEMA NGINX FORA DO AR em 2025-08-06 18:09:00
 
-***
+---
+
+## ☑️ Conclusão
+
+Ao final deste passo-a-passo, o desenvolvedor será capaz de instalar e configurar um servidor web local, definir uma página *index* html, configurar o monitoramento do serviço través do *shell script* e *cron*, além de desenvolver um sistema de alerta Webhook para Slack.
 
 Se você chegou até aqui, muito obrigada pela atenção. :D
