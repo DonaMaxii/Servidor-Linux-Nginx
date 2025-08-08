@@ -10,8 +10,7 @@ Este projeto é supervisionado e coordenado pela equipe de Estágio de DevSecOps
 * [Instalação do Servidor Local](#instalação-do-servidor-local)
 * [Instalação do serviço Ngnix](#instalação-do-serviço-ngnix)
 * [Logs de servidor](#logs-de-servidor)
-* [Notificação Webhook para Slack](#notificacao-webhook-para-slack)
-
+* [Notificação Webhook para Slack](#notificação-webhook-para-slack)
 
 ## ➡️ Passo a Passo:
 
