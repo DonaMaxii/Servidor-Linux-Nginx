@@ -43,15 +43,11 @@ Ps: Outra maneira de checar o *status* do serviço Nginx é através do comando:
 
 Caso digitar no navegador de outra VM, o IP da VM, e o servidor Nginx estiver devidamente ativado, a página inicial padrão do Nginx será exibida na tela.
 
----
-
 __Passo 2:__ para editar a página inicial padrão do Nginx, a ser exibida ao digitar o IP do servidor, basta editar o arquivo *index.nginx-debian.html*:
 
     > nano index.nginx-debian.html
 
 Assim, você pode editar o conteúdo da página em HTML.
-
----
 
 __Passo 3:__ Testando o servidor: para verificar se o servidor está no ar, basta dar um ping no endereço de IP.
 
@@ -100,7 +96,7 @@ __Passo 4:__ Agora, é necessário configurar o sistema para executar esse scrip
     > crontab -e
     > * * * * * /usr/local/bin/script_verify.sh
 
-Ps: cada asterisco (*) representa um parâmetro para a automação do script, com base em minuto, hora, dia do mês, mês e dia da semana. Na configuração acima, o script rodará a cada 1 (um) minuto, ou 60 segundos.
+Ps: cada asterisco (*) representa um parâmetro para a automação do script, com base em minuto, hora, dia do mês, mês e dia da semana. Na configuração acima, o script rodará a cada 1 (um) minuto, ou 60 segundos.    
 
 __Passo 5:__ Por fim, ative o serviço Nginx (caso o mesmo não esteja ativo) e, depois de alguns minutos, verifique se o arquivo de log está sendo populado com as atualizações minuto a minuto.
 
@@ -123,15 +119,15 @@ Neste etapa, configuramos um bot para avisar em um servidor Slack quando o servi
 
 Para isso, é necessário ter uma conta e um workspace Slack ativos.
 
-__Passo 1:__ acesse o link *https://api.slack.com/apps* a partir do Workspace desejado.
+__Passo 1:__ Acesse o link *https://api.slack.com/apps* a partir do Workspace desejado.
 
-__Passo 2:__ configure um bot para servir as notificações, definindo em qual servidor ele irá atuar;
+__Passo 2:__ Crie e configure um app para servir as notificações, definindo em qual Workspace ele irá atuar;
 
-__Passo 3:__ requeira ao Slack um link tipo webhook, que será acrescentado ao script já configurado nos passos acima. O link deverá aparecer neste formato:
+__Passo 3:__ Adicione uma requisição do tipo Webhook, que será acrescentada ao script já configurado nos passos acima. O Slack fornecerá URL, cujo mesmo terá este formato:
 
     https://hooks.slack.com/services/T00000000/B00000000/XXXXXXXXXXXXXXXXXXXXXXXX
 
-__Passo 4:__ insira o referido link no script *script_verify.sh*, declarando a variável WEBHOOK. Em seguida, insira a instrução curl para enviar o alerta ao Slack, definindo mensagem a ser exibida.
+__Passo 4:__ Edite o arquivo de script */usr/local/bin/script_verify.sh*, declarando a variável WEBHOOK_URL e inserindo a instrução curl para enviar o alerta ao Slack, definindo mensagem a ser exibida na notificação.
 
     WEBHOOK_URL="https://hooks.slack.com/services/T00000000/B00000000/XXXXXXXXXXXXXXXXXXXXXXXX"
 
@@ -140,7 +136,7 @@ __Passo 4:__ insira o referido link no script *script_verify.sh*, declarando a v
 	--data '{"text":"ATENÇÃO - SISTEMA NGINX FORA DO AR em '"$DATA"'"}' \
 	"$WEBHOOK_URL"
 
-__Passo 5:__ Por fim, desligue o serviço Nginx através do comando *service nginx stop*. Caso as configurações surtam efeito, você verá as notificações sendo escritas no chat do servidor escolhido.
+__Passo 5:__ Por fim, para testar se a mesnagem está sendo enviada, desligue o serviço Nginx através do comando *service nginx stop*. Caso as configurações surtam efeito, você verá as notificações sendo escritas no chat do servidor escolhido.
 
     18h05
     ATENÇÃO - SISTEMA NGINX FORA DO AR em 2025-08-06 18:05:00
@@ -157,6 +153,6 @@ __Passo 5:__ Por fim, desligue o serviço Nginx através do comando *service ngi
 
 ## ☑️ Conclusão
 
-Ao final deste passo-a-passo, o desenvolvedor será capaz de instalar e configurar um servidor web local, definir uma página *index* html, configurar o monitoramento do serviço través do *shell script* e *cron*, além de desenvolver um sistema de alerta Webhook para Slack.
+Ao final deste passo-a-passo, o desenvolvedor será capaz de instalar e configurar um servidor web local, definir uma página *index* html, configurar o monitoramento do serviço através do *shell script* e *cron*, e desenvolver um sistema de alerta Webhook para Slack.
 
 Se você chegou até aqui, muito obrigada pela atenção. :D
