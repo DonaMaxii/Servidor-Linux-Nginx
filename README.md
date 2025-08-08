@@ -31,7 +31,7 @@ __Passo 1:__ instalando o Nginx: logado no servidor como administrador (root), e
     > apt update
     > apt install nginx
 
-Você pode checar se o serviço Nginx está devidamente instalado e ativo excutando o comando:
+Você pode checar se o serviço Nginx está devidamente instalado e ativo, executando o seguinte comando:
 
     > service --service-all
 
