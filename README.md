@@ -111,7 +111,7 @@ Ps: cada asterisco (*) representa um parâmetro para a automação do script, co
 
 __Passo 6:__ Por fim, ative o serviço Nginx (caso o mesmo não esteja ativo) e, depois de alguns minutos, verifique se o arquivo de log está sendo populado com as atualizações minuto a minuto.
 
-    > service nginx start
+    > systemclt start nginx
     > cat /var/log/nginx_status.log
 
 O arquivo deverá exibir uma saída semelhante a esta:
