@@ -8,7 +8,7 @@ Este projeto é supervisionado e coordenado pela equipe de Estágio de DevSecOps
 
 ## 📝 Índice
 * [Instalação do Servidor Local](#instalação-do-servidor-local)
-* [Instalação do serviço Ngnix](#instalação-do-Serviço-ngnix)
+* [Instalação do serviço Nginx](#instalação-do-Serviço-Nginx)
 * [Logs de servidor](#logs-de-servidor)
 * [Notificação Webhook para Slack](#notificação-webhook-para-slack)
 
@@ -22,9 +22,9 @@ No software hipervisor de sua preferência, crie uma VM e instale a referida dis
 
 --- 
 
-## Instalação do Serviço Ngnix
+## Instalação do Serviço Nginx
 
-Após a instalação da distro e realizadas as configurações iniciais, precede-se com a instalação e configuração do servidor HTTP Ngnix.
+Após a instalação da distro e realizadas as configurações iniciais, precede-se com a instalação e configuração do servidor HTTP Nginx.
 
 __Passo 1:__ instalando o Nginx: logado no servidor como administrador (root), efetue o download do servidor Nginx:
 
