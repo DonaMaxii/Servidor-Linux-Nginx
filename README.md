@@ -92,14 +92,24 @@ Ao programar esse script, atente-se em definir variáveis como o caminho para o 
  
     fi
 
-__Passo 4:__ Agora, é necessário configurar o sistema para executar esse script em tempo real e automaticamente. Para isso, utilizamos o serviço *cron*.
+__Passo 4:__ Para que o serviço seja reiniciado automatimente sem a interferência de um usuário, basta incluir a instrução bash para reiniciar o serviço Nginx:
+
+    if systemctl is-active --quiet nginx; then
+		echo "$DATA - NGINX está ativo." >> "$LOGFILE"
+    else
+		echo "$DATA - ATENÇÃO: o serviço NGINX está parado!!" >> "$LOGFILE"
+    
+    # Reinício do serviço
+        service nginx restart
+
+__Passo 5:__ Agora, é necessário configurar o sistema para executar esse script em tempo real e automaticamente. Para isso, utilizamos o serviço *cron*.
 
     > crontab -e
     > * * * * * /usr/local/bin/script_verify.sh
 
 Ps: cada asterisco (*) representa um parâmetro para a automação do script, com base em minuto, hora, dia do mês, mês e dia da semana. Na configuração acima, o script rodará a cada 1 (um) minuto, ou 60 segundos.    
 
-__Passo 5:__ Por fim, ative o serviço Nginx (caso o mesmo não esteja ativo) e, depois de alguns minutos, verifique se o arquivo de log está sendo populado com as atualizações minuto a minuto.
+__Passo 6:__ Por fim, ative o serviço Nginx (caso o mesmo não esteja ativo) e, depois de alguns minutos, verifique se o arquivo de log está sendo populado com as atualizações minuto a minuto.
 
     > service nginx start
     > cat /var/log/nginx_status.log
