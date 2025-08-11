@@ -6,7 +6,7 @@ Este projeto é supervisionado e coordenado pela equipe de Estágio de DevSecOps
 
 ![Servidor Web Nginx](/thumbnail.png)
 
-## Índice
+## 📝 Índice
 * [Instalação do Servidor Local](#instalação-do-servidor-local)
 * [Instalação do serviço Ngnix](#instalação-do-Serviço-ngnix)
 * [Logs de servidor](#logs-de-servidor)
@@ -54,6 +54,7 @@ __Passo 3:__ Testando o servidor: para verificar se o servidor está no ar, bast
     > ip a //para verificar o IP local do servidor
     > ping //IP do servidor
 
+![Snapshot da página html inicial](/snapshot_1.png)
 ---
 
 ## Logs de servidor
@@ -111,6 +112,7 @@ O arquivo deverá exibir uma saída semelhante a esta:
     2025-08-06 17:25:00 - NGINX está ativo.
     2025-08-06 17:26:00 - NGINX está ativo.
 
+![Snapshot dos logs de servidor](/snapshot_2.png)
 ---
 
 ## Notificação Webhook para Slack
@@ -149,6 +151,7 @@ __Passo 5:__ Por fim, para testar se a mesnagem está sendo enviada, desligue o 
     18h09
     ATENÇÃO - SISTEMA NGINX FORA DO AR em 2025-08-06 18:09:00
 
+![Snapshot das notificações de sistema fora do ar](/snapshot_3.png)
 ---
 
 ## ☑️ Conclusão
