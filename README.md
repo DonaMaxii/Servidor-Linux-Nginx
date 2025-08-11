@@ -100,7 +100,7 @@ __Passo 4:__ Para que o serviço seja reiniciado automatimente sem a interferên
 		echo "$DATA - ATENÇÃO: o serviço NGINX está parado!!" >> "$LOGFILE"
     
     # Reinício do serviço
-        service nginx restart
+        systemctl start nginx
 
 __Passo 5:__ Agora, é necessário configurar o sistema para executar esse script em tempo real e automaticamente. Para isso, utilizamos o serviço *cron*.
 
