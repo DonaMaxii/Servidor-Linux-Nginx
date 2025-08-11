@@ -1,8 +1,8 @@
 # 🖥️ Projeto Servidor Linux com Nginx
 
-Olá! Este é um projeto de servidor Linux com hospedagem HTML, com script para criação de logs, verificação de erros e notificação para a plataforma de chat Slack.
+Olá! Este é um projeto de Servidor Linux Nginx com hospedagem de página HTML, script para criação de logs, verificação de erros e notificação para a plataforma de chat Slack.
 
-Este projeto é supervisionado e coordenado pela equipe de Estágio de DevSecOps da Ai/R Learning.
+Este projeto é supervisionado e coordenado pela equipe de Estágio de DevSecOps da Compass UOL | Ai/R Company.
 
 ![Servidor Web Nginx](/thumbnail.png)
 
@@ -18,7 +18,7 @@ Este projeto é supervisionado e coordenado pela equipe de Estágio de DevSecOps
 
 Neste projeto, utilizaremos uma VM com Ubuntu 24.04.2 instalado, em modo CLI, sem ambiente gráfico.
 
-No software hipervisor de sua preferência, crie uma VM e instale a referida distro.
+No software hipervisor de sua preferência, crie uma VM e instale a referida distribuição.
 
 --- 
 
