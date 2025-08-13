@@ -19,4 +19,7 @@ else
 	curl -X POST -H 'Content-type: application/json' \
 		--data '{"text":"ATENÇÃO - SISTEMA NGINX FORA DO AR em '"$DATA"'"}' \
 		"$WEBHOOK_URL"
+  	#Reiniciando o serviço imediata e automaticamente
+   	systemctl start nginx
+   
 fi
